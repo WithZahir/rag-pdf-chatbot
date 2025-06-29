@@ -22,7 +22,7 @@ llm = HuggingFacePipeline(pipeline=llm_pipeline)
 # --- Define RAG logic ---
 def process_pdf_and_query(pdf_file, user_question):
     # Save uploaded file
-    file_path = pdf_file 
+    file_path = pdf_file.name 
 
     # Load PDF and split
     loader = PyPDFLoader(file_path)
