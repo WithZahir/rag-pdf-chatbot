@@ -1,41 +1,47 @@
+📄 RAG-based PDF Q&A Chatbot
 
-# 🤖 RAG-based PDF Q&A Chatbot
+This is a Retrieval-Augmented Generation (RAG) chatbot that allows you to upload a PDF and ask questions about its content. It uses Hugging Face's flan-t5-base model for generation and ChromaDB for storing document embeddings.
 
-Ask questions about your PDF using a local language model with LangChain + Gradio.
+🔧 Features
+
+Upload any PDF
+
+Extract and chunk text using langchain
+
+Create vector embeddings with all-MiniLM-L6-v2
+
+Store vectors with Chroma
+
+Answer questions using a local flan-t5-base model
+
+Interactive Gradio interface
 
 
+📁 Project Structure
+rag-pdf-chatbot/
+├── app/
+│   └── ui.py                  # Gradio frontend
+├── backend/
+│   ├── rag_pipeline.py       # Core RAG logic
+│   └── llm_config.py         # LLM and embedding setup (if needed)
+├── data/                     # PDF uploads
+├── embeddings/               # ChromaDB vector store
+├── .gitignore
+├── requirements.txt
+└── README.md
 
-## 🚀 Features
-- 📄 Upload any PDF
-- 🔍 Extracts and chunks text
-- 🧠 Embeds with `MiniLM-L6-v2`
-- 💾 Stores in ChromaDB
-- 🗣️ Answers with `Flan-T5`
-- 🖼️ Clean UI with Gradio
 
----
+🤖 Tech Stack
 
-## 🛠️ Setup Instructions
+LangChain
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/yourusername/rag-qna.git
-cd rag-qna
-```
+HuggingFace Transformers
 
-### 2. Create Python Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-```
+ChromaDB
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
 
-### 4. Run the App
-```bash
-python app/ui.py
-```
-Open your browser to [http://localhost:7860](http://localhost:7860)
+🙌 Credits
+
+Built with ❤️ by WithZahir
+
+Gradio
