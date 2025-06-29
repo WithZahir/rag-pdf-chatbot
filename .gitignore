@@ -1,0 +1,14 @@
+# Ignore environment and cache
+__pycache__/
+.pyc
+.pyo
+.pyd
+.env
+
+# Ignore model/cache directories
+data/
+embeddings/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
